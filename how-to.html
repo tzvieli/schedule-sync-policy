@@ -2,39 +2,175 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to Use</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Use – Schedule Sync</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --grad1: #1f1c2c;
+      --grad2: #928dab;
+      --accent: #4E8CFF;
+      --text: #ececec;
+      --card-bg: rgba(255, 255, 255, 0.1);
+      --shadow: rgba(0, 0, 0, 0.5);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(45deg, var(--grad1), var(--grad2), var(--grad1));
+      background-size: 600% 600%;
+      color: var(--text);
+      animation: gradientBG 20s ease infinite;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 0;
+    }
+
+    /* Header */
+    .site-header {
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 32px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--text);
+      text-shadow: 0 2px 8px var(--shadow);
+    }
+    .logo span { color: var(--accent); }
+    .site-nav a {
+      margin-left: 1.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--text);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      transition: background 0.3s, transform 0.3s;
+    }
+    .site-nav a:hover,
+    .site-nav a.active {
+      background: rgba(78, 140, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* How-To Section */
+    .howto-section h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-align: center;
+      text-shadow: 0 2px 8px var(--shadow);
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 2rem;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 12px 24px var(--shadow);
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 16px 32px var(--shadow);
+    }
+    .card ol {
+      list-style: decimal inside;
+      margin-bottom: 1.5rem;
+    }
+    .card ol li {
+      margin: 0.75rem 0;
+      line-height: 1.5;
+      font-size: 1.1rem;
+    }
+    .card p {
+      font-size: 1rem;
+      color: #ddd;
+      line-height: 1.5;
+    }
+    .card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px dashed var(--accent);
+    }
+    .card a:hover {
+      border-bottom-style: solid;
+    }
+
+    /* Contact & Footer */
+    .site-footer {
+      margin-top: auto;
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 -8px 32px var(--shadow);
+      text-align: center;
+      padding: 1rem 0;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    .site-footer p {
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>Schedule Sync</h1>
-  <nav>
-    <a href="home.html">Home</a>
-    <a href="how-to.html">How to Use</a>
-    <a href="privacy.html">Privacy</a>
-  </nav>
-</header>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Schedule <span>Sync</span></h1>
+      <nav class="site-nav">
+        <a href="home.html">Home</a>
+        <a href="how-to.html" class="active">How to Use</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
 
-<main>
-  <section class="content">
+  <main class="howto-section container">
     <h2>How to Use Schedule Sync</h2>
-    <ol>
-      <li>Install the Schedule Sync Chrome Extension from the Chrome Web Store.</li>
-      <li>Click the extension icon and authorize with your Google account.</li>
-      <li>Open your Moodle dashboard and click "Sync Courses" to sync your class schedule.</li>
-      <li>Click "Sync Assignments" to sync all your Moodle assignments.</li>
-      <li>Check your Google Calendar to see your updated schedule!</li>
-    </ol>
-    <p>Need help? Watch our <a href="https://drive.google.com/drive/folders/your-drive-folder">video tutorial</a>.</p>
-  </section>
+    <div class="card">
+      <ol>
+        <li>Install the Schedule Sync Chrome Extension from the Chrome Web Store.</li>
+        <li>Click the extension icon and sign in with your Google account.</li>
+        <li>Open your Moodle dashboard and click “Sync Courses” to import your class schedule.</li>
+        <li>Click “Sync Assignments” to pull in all upcoming Moodle assignments.</li>
+        <li>Check your Google Calendar—your courses and deadlines should now appear!</li>
+      </ol>
+      <p>Need extra help? Watch our <a href="https://drive.google.com/drive/folders/your-drive-folder" target="_blank" rel="noopener">video tutorial</a>.</p>
+    </div>
+  </main>
 
-</main>
-
-<footer>
-  <p>&copy; 2025 Schedule Sync. All rights reserved.</p>
-</footer>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Schedule Sync. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
