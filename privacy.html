@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -251,6 +251,236 @@
       <p>&copy; 2025 Schedule Sync. All rights reserved.</p>
     </div>
   </footer>
+
+</body>
+</html>
+ -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy – Schedule Sync</title>
+  <style>
+    :root {
+      --bg: #ECF0F3;
+      --fg: #333;
+      --accent: #FF6F61;
+      --card-bg: #ECF0F3;
+      --shadow-light: #FFFFFF;
+      --shadow-dark: #A3B1C6;
+      --radius: 16px;
+      --font: 'Montserrat', sans-serif;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font);
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--fg);
+      margin-bottom: 0.5rem;
+    }
+    header h1 span {
+      color: var(--accent);
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--fg);
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: width .3s;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+    }
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    main h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .intro {
+      text-align: center;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow:
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+      transition: box-shadow .3s, transform .3s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        12px 12px 24px var(--shadow-dark),
+        -12px -12px 24px var(--shadow-light);
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .card p, .card ul {
+      margin-bottom: 1rem;
+      color: #555;
+    }
+    .card ul {
+      padding-left: 1.2rem;
+    }
+    .card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px dashed var(--accent);
+    }
+    .card a:hover {
+      border-bottom-style: solid;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 1rem;
+    }
+    .contact a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Schedule <span>Sync</span></h1>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="how-to.html">How to Use</a>
+        <a href="privacy.html" class="active">Privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Privacy Policy</h2>
+      <p class="intro">We take your privacy seriously. Here’s how <strong>Schedule Sync</strong> handles your data:</p>
+
+      <div class="cards">
+        <section class="card">
+          <h3>Data We Access</h3>
+          <p>Our extension only requests:</p>
+          <ul>
+            <li>Permission to create &amp; update your calendar events.</li>
+            <li>Permission to read existing events (to prevent duplicates).</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h3>How We Use It</h3>
+          <p>All interactions happen within your Google account:</p>
+          <ul>
+            <li>No event data is stored on our servers.</li>
+            <li>We never share, sell, or analyze your personal events.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h3>Security</h3>
+          <ul>
+            <li>OAuth 2.0 &amp; HTTPS encryption end-to-end.</li>
+            <li>Leverage Google's secure infrastructure—no local storage.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h3>Your Control</h3>
+          <p>You can revoke or adjust permissions anytime via your <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account Settings</a>. To remove all traces, simply uninstall the extension or revoke access.</p>
+        </section>
+
+        <section class="card">
+          <h3>Third-Party Services</h3>
+          <p>We integrate only with Google. No other services touch your data.</p>
+        </section>
+
+        <section class="card">
+          <h3>Cookies</h3>
+          <p>Only essential cookies for session management. Zero analytics or tracking cookies.</p>
+        </section>
+
+        <section class="card">
+          <h3>Children’s Privacy</h3>
+          <p>Intended for students 16+. We do not knowingly collect data from minors.</p>
+        </section>
+
+        <section class="card">
+          <h3>Policy Updates</h3>
+          <p>We may update this policy occasionally. Check back here or follow us on <a href="#" class="link">Twitter</a> for announcements.</p>
+        </section>
+      </div>
+
+      <div class="contact">
+        <p>Questions? Email us at <a href="mailto:privacy@schedulesync.app">privacy@schedulesync.app</a></p>
+      </div>
+    </main>
+
+    <footer>
+      &copy; 2025 Schedule Sync. All rights reserved.
+    </footer>
+  </div>
 
 </body>
 </html>
