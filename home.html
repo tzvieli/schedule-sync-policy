@@ -1,47 +1,197 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Schedule Sync</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --grad1: #1f1c2c;
+      --grad2: #928dab;
+      --accent: #4E8CFF;
+      --text: #ececec;
+      --shadow: rgba(0, 0, 0, 0.5);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(45deg, var(--grad1), var(--grad2), var(--grad1));
+      background-size: 600% 600%;
+      color: var(--text);
+      animation: gradientBG 20s ease infinite;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .container { width: 90%; max-width: 1000px; margin: auto; }
+
+    /* Header */
+    header {
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 32px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px var(--shadow);
+    }
+    header h1 span { color: var(--accent); }
+    nav a {
+      margin-left: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      transition: background 0.3s, transform 0.3s;
+    }
+    nav a:hover,
+    nav a.active {
+      background: rgba(78,140,255,0.3);
+      transform: translateY(-2px);
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    .hero h2 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 8px var(--shadow);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #ddd;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.75rem 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+    }
+
+    /* Features */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+    .feature-card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      box-shadow: 0 12px 24px var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .feature-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 16px 32px var(--shadow);
+    }
+    .feature-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      color: var(--accent);
+      text-shadow: 0 1px 4px var(--shadow);
+    }
+    .feature-card p {
+      color: #ddd;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: auto;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.3);
+      box-shadow: 0 -8px 32px var(--shadow);
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    footer p {
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>Schedule Sync</h1>
-  <nav>
-    <a href="home.html">Home</a>
-    <a href="how-to.html">How to Use</a>
-    <a href="privacy.html">Privacy</a>
-  </nav>
-</header>
-
-<main>
-  <section class="hero">
-    <h2>Sync Your College Schedule Effortlessly</h2>
-    <p>Automatically sync your courses and assignments from Moodle to Google Calendar.</p>
-    <a href="https://chrome.google.com/webstore/detail/schedule-sync/" class="btn">Get the Extension</a>
-  </section>
-
-  <section class="features">
-    <div>
-      <h3>One-Click Sync</h3>
-      <p>Quickly sync all your courses and assignments with one click.</p>
+  <header>
+    <div class="container">
+      <h1>Schedule <span>Sync</span></h1>
+      <nav>
+        <a href="home.html" class="active">Home</a>
+        <a href="how-to.html">How to Use</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
     </div>
-    <div>
-      <h3>Automatic Updates</h3>
-      <p>Keep your calendar up to date with the latest changes from Moodle.</p>
-    </div>
-    <div>
-      <h3>Simple Setup</h3>
-      <p>Easy to install, no complicated configuration needed.</p>
-    </div>
-  </section>
-</main>
+  </header>
 
-<footer>
-  <p>&copy; 2025 Schedule Sync. All rights reserved.</p>
-</footer>
+  <main class="container">
+    <section class="hero">
+      <h2>Sync Your College Schedule Effortlessly</h2>
+      <p>Automatically sync your courses and assignments from Moodle to Google Calendar with one click.</p>
+      <a href="https://chrome.google.com/webstore/detail/schedule-sync/" class="btn">Get the Extension</a>
+    </section>
+
+    <section class="features">
+      <div class="feature-card">
+        <h3>One-Click Sync</h3>
+        <p>Quickly import all your courses and assignments with a single click—no fuss.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Real-Time Updates</h3>
+        <p>Stay up to date: any changes on Moodle are reflected instantly in your calendar.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Effortless Setup</h3>
+        <p>Install and authorize in seconds—no configuration nightmares.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Schedule Sync. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
