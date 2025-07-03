@@ -1,65 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Schedule Sync - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Rubik', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9fafb;
-      color: #1f2937;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    header {
-      background-color: #4f46e5;
-      padding: 16px;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
-    nav a {
-      color: white;
-      margin-left: 16px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      flex: 1;
-      padding: 40px;
-      text-align: center;
-    }
-    main h2 {
-      font-size: 2rem;
-      margin-bottom: 16px;
-    }
-    main p {
-      font-size: 1.1rem;
-      color: #4b5563;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    footer {
-      text-align: center;
-      padding: 12px;
-      background-color: #e5e7eb;
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
-  </style>
+  <title>Schedule Sync</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -73,13 +17,30 @@
 </header>
 
 <main>
-  <h2>Welcome to Schedule Sync</h2>
-  <p>Easily sync your college schedule and Moodle assignments to your Google Calendar.</p>
-  <p>Click "How to Use" to get started.</p>
+  <section class="hero">
+    <h2>Sync Your College Schedule Effortlessly</h2>
+    <p>Automatically sync your courses and assignments from Moodle to Google Calendar.</p>
+    <a href="https://chrome.google.com/webstore/detail/schedule-sync/" class="btn">Get the Extension</a>
+  </section>
+
+  <section class="features">
+    <div>
+      <h3>One-Click Sync</h3>
+      <p>Quickly sync all your courses and assignments with one click.</p>
+    </div>
+    <div>
+      <h3>Automatic Updates</h3>
+      <p>Keep your calendar up to date with the latest changes from Moodle.</p>
+    </div>
+    <div>
+      <h3>Simple Setup</h3>
+      <p>Easy to install, no complicated configuration needed.</p>
+    </div>
+  </section>
 </main>
 
 <footer>
-  &copy; 2025 Tzvi Newman
+  <p>&copy; 2025 Schedule Sync. All rights reserved.</p>
 </footer>
 
 </body>
