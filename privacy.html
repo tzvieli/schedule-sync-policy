@@ -289,7 +289,33 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    .container { width: 90%; max-width: 1000px; margin: auto; padding: 2rem 0; }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 0;
+      word-break: break-word;
+    }
+
+    /* Ensure responsive grid */
+    .policy-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    @media (max-width: 600px) {
+      .policy-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Prevent text overflow in cards and intro */
+    .intro,
+    .card p,
+    .card ul {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
 
     /* Header */
     .site-header {
@@ -324,7 +350,7 @@
       transform: translateY(-2px);
     }
 
-    /* Main */
+    /* Main titles */
     .policy-section h2 {
       font-size: 2.5rem;
       font-weight: 800;
@@ -342,11 +368,7 @@
       color: #ddd;
     }
 
-    .policy-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 2rem;
-    }
+    /* Cards */
     .card {
       background: var(--card-bg);
       border-radius: var(--radius);
@@ -366,25 +388,8 @@
       color: var(--accent);
       text-shadow: 0 1px 4px var(--shadow-color);
     }
-    .card p, .card ul {
-      color: #ddd;
-      line-height: 1.5;
-    }
-    .card ul {
-      margin-top: 0.5rem;
-      list-style: disc inside;
-    }
-    .card a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-      border-bottom: 1px dashed var(--accent);
-    }
-    .card a:hover {
-      border-bottom-style: solid;
-    }
 
-    /* Contact */
+    /* Contact & Footer */
     .contact {
       text-align: center;
       margin-top: 3rem;
@@ -400,8 +405,6 @@
       font-weight: 600;
       text-decoration: none;
     }
-
-    /* Footer */
     .site-footer {
       margin-top: auto;
       backdrop-filter: blur(10px);
@@ -411,10 +414,7 @@
       padding: 1rem 0;
       border-top: 1px solid rgba(255,255,255,0.2);
     }
-    .site-footer p {
-      color: #bbb;
-      font-size: 0.9rem;
-    }
+    .site-footer p { color: #bbb; font-size: 0.9rem; }
   </style>
 </head>
 <body>
