@@ -1,4 +1,4 @@
-
+<!-- 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -251,6 +251,260 @@
       <section class="card">
         <h3>Policy Updates</h3>
         <p>We may update this policy over time. Check this page for the latest version.</p>
+      </section>
+    </div>
+
+    <div class="contact">
+      <h3>Questions?</h3>
+      <p>Email us at <a href="mailto:privacy@schedulesync.app">privacy@schedulesync.app</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Schedule Sync. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy – Schedule Sync</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --grad1: #1f1c2c;
+      --grad2: #928dab;
+      --accent: #4E8CFF;
+      --text: #ececec;
+      --card-bg: rgba(255, 255, 255, 0.1);
+      --shadow-color: rgba(0, 0, 0, 0.5);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(45deg, var(--grad1), var(--grad2), var(--grad1));
+      background-size: 600% 600%;
+      color: var(--text);
+      animation: gradientBG 20s ease infinite;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 0;
+      word-break: break-word;
+    }
+
+    .policy-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    @media (max-width: 600px) {
+      .policy-cards { grid-template-columns: 1fr; }
+    }
+
+    .intro,
+    .card p,
+    .card ul {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+
+    .site-header {
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 32px var(--shadow-color);
+      position: sticky; top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .site-header .container {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo {
+      font-size: 2rem; font-weight: 800;
+      letter-spacing: 2px; color: var(--text);
+      text-shadow: 0 2px 8px var(--shadow-color);
+    }
+    .logo span { color: var(--accent); }
+    .site-nav a {
+      margin-left: 1.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--text);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      transition: background 0.3s, transform 0.3s;
+    }
+    .site-nav a:hover,
+    .site-nav a.active {
+      background: rgba(78, 140, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .policy-section h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-align: center;
+      text-shadow: 0 2px 8px var(--shadow-color);
+    }
+    .intro {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #ddd;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 2rem;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 12px 24px var(--shadow-color);
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 16px 32px var(--shadow-color);
+    }
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      color: var(--accent);
+      text-shadow: 0 1px 4px var(--shadow-color);
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .contact h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+      text-shadow: 0 1px 4px var(--shadow-color);
+    }
+    .contact a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .site-footer {
+      margin-top: auto;
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 -8px 32px var(--shadow-color);
+      text-align: center;
+      padding: 1rem 0;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    .site-footer p { color: #bbb; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Schedule <span>Sync</span></h1>
+      <nav class="site-nav">
+        <a href="home.html">Home</a>
+        <a href="how-to.html">How to Use</a>
+        <a href="privacy.html" class="active">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="policy-section container">
+    <h2>Privacy Policy</h2>
+    <p class="intro">
+      At <strong>Schedule Sync</strong>, your privacy and control over your Google data are our top priorities. Here’s exactly what we access, how long we retain it, and how you can delete it:
+    </p>
+
+    <div class="policy-cards">
+      <section class="card">
+        <h3>Data We Access</h3>
+        <p>We request only the following Google OAuth scopes to provide syncing functionality:</p>
+        <ul>
+          <li><code>https://www.googleapis.com/auth/calendar.events</code><br>
+            Full read/write access to your calendar events (titles, times, descriptions).</li>
+          <li><code>https://www.googleapis.com/auth/calendar.events.readonly</code><br>
+            Read-only access, used to avoid duplicate events.</li>
+          <li><code>openid profile email</code><br>
+            Basic profile info (your name and email) for authentication purposes only.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>How We Use Your Data</h3>
+        <ul>
+          <li><strong>Calendar Events:</strong> Created, updated, and read solely to sync your college schedule into Google Calendar.</li>
+          <li><strong>Profile &amp; Email:</strong> Used only to identify you and manage secure OAuth tokens.</li>
+          <li><strong>No Third-Party Storage:</strong> We do not store any Google user data on our servers.</li>
+          <li><strong>No Sharing or Selling:</strong> We never share, sell, or analyze your personal calendar data.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Security &amp; Storage</h3>
+        <ul>
+          <li>All data is transmitted via HTTPS and protected by OAuth 2.0 end-to-end encryption.</li>
+          <li>We leverage Google’s secure infrastructure—no data is stored outside of your Google account.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Data Retention &amp; Deletion</h3>
+        <ul>
+          <li>We do not retain any Google data on our servers.</li>
+          <li>All calendar events reside solely in your Google account.</li>
+          <li>When you revoke permissions or uninstall the extension, all OAuth tokens and session data are deleted immediately.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Your Control</h3>
+        <p>You can revoke or adjust permissions anytime in your <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account Settings</a>. To remove all access, uninstall the extension or revoke its OAuth access.</p>
+      </section>
+
+      <section class="card">
+        <h3>Third-Party Services</h3>
+        <p>We integrate only with Google Calendar and Google OAuth. No other third parties touch your data.</p>
+      </section>
+
+      <section class="card">
+        <h3>Cookies &amp; Tracking</h3>
+        <p>We use only essential session cookies. We do not deploy analytics or tracking cookies.</p>
+      </section>
+
+      <section class="card">
+        <h3>Children’s Privacy</h3>
+        <p>Intended for students age 16+. We do not knowingly collect data from minors under 16.</p>
+      </section>
+
+      <section class="card">
+        <h3>Policy Updates</h3>
+        <p>We may update this policy over time. Check this page regularly for the latest version.</p>
       </section>
     </div>
 
